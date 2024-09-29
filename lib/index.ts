@@ -18,6 +18,7 @@ export const FMC = (key: string) => {
     multipleTokens,
   };
 };
+
 const subscribeToTopic = async (token: string, topic: string) => {
   if (!token) throw new Error('token is required');
   if (!topic) throw new Error('topic is required');

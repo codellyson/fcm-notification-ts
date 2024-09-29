@@ -5,6 +5,10 @@
   "main": "./dist/index.js",
   "types": "./types/types.d.ts",
   "author": "codellyson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codellyson/fcm-notification-ts"
+  },
   "scripts": {
     "build": "tsc",
     "publish": "tsc && npm publish"
