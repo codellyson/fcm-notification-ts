@@ -1,4 +1,4 @@
-import { FMC } from '../lib/index';
+import { FMC } from '../src/index';
 import key from './key.json';
 
 const token = '';

@@ -1,5 +1,15 @@
 import admin from 'firebase-admin';
-import { Payload, Topic } from '../types/types';
+
+export type Payload = {
+  topic?: string;
+  notification: {
+    title: string;
+    body: string;
+  };
+  token: string;
+};
+
+export type Topic = string;
 
 const FMC = (key: string) => {
   if (!key) throw new Error('key is required');
@@ -96,7 +106,7 @@ const FMC = (key: string) => {
     send,
     subscribeToTopic,
     unsubscribeFromTopic,
-    sendToMultipleTopics: multipleTopics,
+    multipleTopics,
     multipleTokens,
   };
 };
