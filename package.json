@@ -4,12 +4,12 @@
   "description": "",
   "type": "module",
   "main": "./dist/index.js",
+  "author": "codellyson",
   "scripts": {
     "build": "tsc ",
     "publish": "tsc && npm publish"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["fcm", "firebase", "notification"],
   "license": "ISC",
   "publishConfig": {
     "access": "public"
