@@ -1,6 +1,6 @@
 {
   "name": "fcm-notification-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "type": "module",
   "main": "./dist/index.js",
@@ -9,7 +9,11 @@
     "build": "tsc ",
     "publish": "tsc && npm publish"
   },
-  "keywords": ["fcm", "firebase", "notification"],
+  "keywords": [
+    "fcm",
+    "firebase",
+    "notification"
+  ],
   "license": "ISC",
   "publishConfig": {
     "access": "public"
