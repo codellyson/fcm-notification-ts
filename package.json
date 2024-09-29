@@ -3,7 +3,7 @@
   "version": "1.0.10",
   "description": "A simple Firebase Cloud Messaging (FCM) notification library for Node.js",
   "main": "./dist/index.js",
-  "types": "./types/types.d.ts",
+  "types": "./dist/index.d.ts",
   "author": "codellyson",
   "repository": {
     "type": "git",
