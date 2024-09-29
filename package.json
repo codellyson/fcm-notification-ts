@@ -1,6 +1,6 @@
 {
   "name": "fcm-notification-ts",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple Firebase Cloud Messaging (FCM) notification library for Node.js",
   "main": "./dist/index.js",
   "types": "./types/types.d.ts",
