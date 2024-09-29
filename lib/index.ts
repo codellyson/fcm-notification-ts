@@ -1,14 +1,7 @@
 import admin from 'firebase-admin';
+import { Payload, Topic } from '../types/types';
 
-type Payload = {
-  topic?: string;
-  notification: {
-    title: string;
-    body: string;
-  };
-  token: string;
-};
-type Topic = string;
+
 
 export const FMC = (key: string) => {
   if (!key) throw new Error('key is required');
