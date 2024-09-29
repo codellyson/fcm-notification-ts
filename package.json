@@ -1,6 +1,6 @@
 {
   "name": "fcm-notification-ts",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple Firebase Cloud Messaging (FCM) notification library for Node.js",
   "main": "./dist/index.js",
   "types": "./types/types.d.ts",
@@ -18,7 +18,7 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "preversion": "npm run build",
-    "postversion": "git push --follow-tags", 
+    "postversion": "git push --follow-tags",
     "publish": "npm publish"
   },
   "files": [
