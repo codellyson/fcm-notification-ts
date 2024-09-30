@@ -1,16 +1,22 @@
-import admin from 'firebase-admin';
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FCM = void 0;
+const firebase_admin_1 = __importDefault(require("firebase-admin"));
 const FCM = (key) => {
     if (!key)
         throw new Error('key is required');
-    admin.initializeApp({
-        credential: admin.credential.cert(JSON.parse(key)),
+    firebase_admin_1.default.initializeApp({
+        credential: firebase_admin_1.default.credential.cert(JSON.parse(key)),
     });
     const subscribeToTopic = async (token, topic) => {
         if (!token)
             throw new Error('token is required');
         if (!topic)
             throw new Error('topic is required');
-        const response = await admin.messaging().subscribeToTopic(token, topic);
+        const response = await firebase_admin_1.default.messaging().subscribeToTopic(token, topic);
         if (response.failureCount > 0) {
             throw new Error('Failed to subscribe to topic, Reason' + response.errors);
         }
@@ -21,7 +27,7 @@ const FCM = (key) => {
             throw new Error('token is required');
         if (!topic)
             throw new Error('topic is required');
-        const response = await admin.messaging().unsubscribeFromTopic(token, topic);
+        const response = await firebase_admin_1.default.messaging().unsubscribeFromTopic(token, topic);
         if (response.failureCount > 0) {
             throw new Error('Failed to unsubscribe from topic, Reason' + response.errors);
         }
@@ -31,7 +37,7 @@ const FCM = (key) => {
         try {
             if (!payload)
                 throw new Error('please provide a message object');
-            const response = await admin.messaging().send(payload);
+            const response = await firebase_admin_1.default.messaging().send(payload);
             return response;
         }
         catch (error) {
@@ -90,5 +96,5 @@ const FCM = (key) => {
         multipleTokens,
     };
 };
-export { FCM };
+exports.FCM = FCM;
 //# sourceMappingURL=index.js.map
