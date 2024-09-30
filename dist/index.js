@@ -1,5 +1,5 @@
 import admin from 'firebase-admin';
-const FMC = (key) => {
+const FCM = (key) => {
     if (!key)
         throw new Error('key is required');
     admin.initializeApp({
@@ -90,5 +90,5 @@ const FMC = (key) => {
         multipleTokens,
     };
 };
-export { FMC };
+export { FCM };
 //# sourceMappingURL=index.js.map

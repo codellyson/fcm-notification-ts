@@ -11,7 +11,7 @@ export type Payload = {
 
 export type Topic = string;
 
-const FMC = (key: string) => {
+const FCM = (key: string) => {
   if (!key) throw new Error('key is required');
 
   admin.initializeApp({
@@ -111,4 +111,4 @@ const FMC = (key: string) => {
   };
 };
 
-export { FMC };
+export { FCM };

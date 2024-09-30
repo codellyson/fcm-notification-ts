@@ -1,4 +1,4 @@
-import { FMC } from '../src/index';
+import { FMC } from 'ts-fcm-notification';
 import key from './key.json';
 
 const token = '';
