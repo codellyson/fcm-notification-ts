@@ -2,20 +2,20 @@
 
 ## Overview
 
-[`fcm-notification-ts`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fpackage.json%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A1%2C%22character%22%3A11%7D%7D%5D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "Go to definition") is a simple library to send push notifications using Firebase Cloud Messaging (FCM) in Node.js. This library provides functionalities to send messages to individual tokens, multiple tokens, and topics.
+[`ts-fcm-notification`](# "Go to definition") is a simple library to send push notifications using Firebase Cloud Messaging (FCM) in Node.js. This library provides functionalities to send messages to individual tokens, multiple tokens, and topics.
 
 ## Installation
 
 To install the library, use npm or yarn:
 
 ```sh
-npm install fcm-notification-ts
+npm install ts-fcm-notification
 ```
 
 or
 
 ```sh
-yarn add fcm-notification-ts
+yarn add ts-fcm-notification
 ```
 
 ## Usage
@@ -25,10 +25,10 @@ yarn add fcm-notification-ts
 First, initialize the library with your Firebase service account key:
 
 ```typescript
-import { FMC } from 'fcm-notification-ts';
+import { FCM } from 'ts-fcm-notification';
 import key from './path/to/your-service-account-file.json';
 
-const fcm = FMC(JSON.stringify(key));
+const fcm = FCM(JSON.stringify(key));
 ```
 
 ### Sending Messages
@@ -133,40 +133,40 @@ console.log(response);
 
 ## API Reference
 
-### [`FMC(key: string)`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fexamples%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A0%2C%22character%22%3A9%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.js%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A14%2C%22character%22%3A8%7D%7D%5D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "Go to definition")
+### [`FCM(key: string)`](# "Go to definition")
 
 Initializes the FCM library with the provided service account key.
 
-### [`send(payload: any)`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fexamples%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A21%2C%22character%22%3A29%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A93%2C%22character%22%3A25%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.js%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A49%2C%22character%22%3A9%7D%7D%5D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "Go to definition")
+### [`send(payload: any)`](# "Go to definition")
 
 Sends a message to a single token or topic.
 
-### [`multipleTokens(i: number, tokens: string[], payload: any)`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fexamples%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A67%2C%22character%22%3A29%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A82%2C%22character%22%3A6%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.js%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A84%2C%22character%22%3A6%7D%7D%5D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "Go to definition")
+### [`multipleTokens(i: number, tokens: string[], payload: any)`](# "Go to definition")
 
 Sends a message to multiple tokens.
 
-### [`sendToMultipleTopics(i: number, topics: string[], payload: any)`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fexamples%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A49%2C%22character%22%3A29%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.js%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A26%2C%22character%22%3A8%7D%7D%5D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "Go to definition")
+### [`sendToMultipleTopics(i: number, topics: string[], payload: any)`](# "Go to definition")
 
 Sends a message to multiple topics.
 
-### [`subscribeToTopic(token: string, topic: string)`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fexamples%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A26%2C%22character%22%3A29%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.js%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A31%2C%22character%22%3A6%7D%7D%5D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "Go to definition")
+### [`subscribeToTopic(token: string, topic: string)`](# "Go to definition")
 
 Subscribes a device token to a topic.
 
-### [`unsubscribeFromTopic(token: string, topic: string)`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fexamples%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A31%2C%22character%22%3A29%7D%7D%2C%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Flib%2Findex.js%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A42%2C%22character%22%3A6%7D%7D%5D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "Go to definition")
+### [`unsubscribeFromTopic(token: string, topic: string)`](# "Go to definition")
 
 Unsubscribes a device token from a topic.
 
 ## Example
 
-An example usage of the library can be found in the [`examples/index.ts`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Flukmanisiaka%2FDesktop%2Fworkfolder%2Flibraries%2Ffcm-notification-ts%2Fexamples%2Findex.ts%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%223b2908f1-cf84-4a16-9ad9-fd4843580f44%22%5D "/Users/lukmanisiaka/Desktop/workfolder/libraries/fcm-notification-ts/examples/index.ts") file.
+An example usage of the library can be found in the [`examples/index.ts`](# "examples/index.ts") file.
 
 ```typescript
-import { FMC } from '../lib/index';
-import key from './pilot-x-19cef-firebase-adminsdk-kxah9-83af0718ef.json';
+import { FCM } from '../lib/index';
+import key from './key.json';
 
 const token = 'your-device-token';
-const fcm = FMC(JSON.stringify(key));
+const fcm = FCM(JSON.stringify(key));
 
 const message = {
   data: {
